@@ -1,0 +1,106 @@
+Git Lessons
+
+>>>  Git
+
+Git is a software that allows us to keep track of changes 
+
+A Git project has three parts:
+(1) Working Directory: where to do all the editing work
+(2) Staging Area: list changes 
+(3) Repository: where Git permanently stores those changes (as a commit) as different versions of the project
+
+git init  -> set up all the tools Git needs to begin tracking changes 
+
+git status  -> check the status of the project
+	(red) untracked files: Git sees the file but has not started tracking changes yet
+git add filename  -> add a file to the staging area
+	(green) Initial commit
+git diff filename  -> check the difference betwween the working directory and the staging area
+q  -> exit diff mode
+git commit -m "commit message"
+	-m: message rules:
+		Must be in quotation marks 
+		Written in the present tense
+		Should be brief (50 characters or less) when using -m
+git log  -> log a list of commits
+	- (orange)A 40-character code (SHA) uniquely identifies the commit 
+	- The commit author
+	- The date and time of the commit
+	- The commit message
+
+>>> Backtrack
+
+HEAD Commit  -> the commit you are currently on
+git show HEAD  -> see HEAD commit
+git checkout HEAD filename  -> restore the last commit
+git add file1 file2  -> add multiple files to the staging area
+git reset HEAD filename  -> reset the file in the staging area to be the same as the HEAD
+	M filename  -> M: "Modification"
+git reset SHA  -> SHA (using 1st 7 characters) rewind the history (all commits after that are gone)
+
+>>> Git Branching
+
+git branch  -> which branch am I?
+git checkout branch-name  -> switch to this branch
+git merge branch-name  -> "fast forward" since branch contains the most recent commit
+git branch -d brancgit branch new-branch-name  -> create a new branch
+h-name  -> delete branch
+
+>>> Git Teamwork
+
+A remote: a shared Git repository that allows multiple collaborators to work on the same Git project from different locations
+
+git clone remote_location clone_name  -> clone from remote_location (web address / filepath) and call the clone file clone_name / name origin
+git remote -v  -> see a list of a Git project's remotes
+git fetch origin -> get all the changes happened in origin
+git merger origin/master  -> merge origin/master to my local master to make it up-to-date
+git push origin branch_name  -> push branch up to the remote (then review the branch and merge)
+
+git clone -> git fetch -> git merge origin/master -> git push origin branch_name
+
+-----------------------
+
+GitHub
+
+a code hosting platform for version control and collaboration
+
+Step 1 Create a Repository
+
+Repository  -> used to organize a single project
+ 	- contain folders / files / images / videos / spreadsheets / data sets
+ 	- README (recommend)
+ 	- a license file (common option)
++ > Create a new repository
+
+Step 2 Create a Branch
+
+branch: different versions
+master: definitive branch
+
+Flow
+Create a branch 
+-> commit changes 
+-> submit pull request 
+-> discuss proposed changes 
+-> merge the branch into master
+
+Step 3 Make and commit changes
+
+Commits: save changes / associated with a commit message (what you've done and why)
+Make changes -> Make commits
+
+Step 4 Open a Pull Request
+
+Pull Request are the heart of collaboration on Github
+Open a Pull Request: you're proposing your changes and requesting that someone review and pull in your contribution and merge them into their branch
+Pull Requests: show diffs
+When: make a commit -> can open a PR and start a discussion
+How: using @mention system in your pull request message
+
+Open a Pull Request for changes 
+[ Pull requests ] tab -> [ New pull request ] -> Select your [ branch ]
+Look good to me -> [ Create pull request ] -> Add PR title / brief description
+
+Step 5 Merge your Pull Request
+
+[ Merge pull request ] -> confirm -> delete branch
