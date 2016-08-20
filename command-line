@@ -1,0 +1,110 @@
+Command Line Lessons
+
+$ shell prompt  -> terminal is ready to accept a command
+up and down arrow keys  -> go through previous commands
+clear  -> clear the terminal window
+history  -> a history of commands entered in the current session
+
+------------------------------------------
+
+>>> Navigate Filesystem
+
+filesystem / directory / root directory
+
+pwd  -> print working directory
+cd  -> change directory cd filename (argument)
+cd ..  -> navigate up
+mkdir  -> make directory
+touch  -> create a new file inside the working directory 
+
+ls  -> look at the folder you are in / list files and folders inside it
+ls -a  -> list all contents, including hidden files and directories
+ls -l  -> list all contents of a directory in long format
+	col 1: access right
+	col 2: number of hard links (number of child directories and files)
+	col 3: username of the file's owner
+	col 4: name of the group that owns the file
+	col 5: size of the file in bytes
+	col 6: date and time that the file was last modified
+	col 7: name of the file or directory
+ls -t  -> order files and directories by the time they were last modified
+ls -alt  -> combination of all the above commands
+
+>>> Actions in Filesystem
+
+cp  -> Copy
+cp file1 file2  -> copy file1 to file2
+cp file directory/  -> copy file to the directory
+cp file1 file2 file3 directory/  -> copy multiple files to the new directory
+cp * directory/  -> * wildcards select all files in the pwd and copy to new directory
+cp m*.txt directory/  -> select all files in the pwd starting with "m" and ending with ".txt" and copy to new directory
+
+mv  -> Move
+mv file directory/  -> move file to the directory
+mv file1 file2 direcotry/  -> move multiple files to the directory
+mv file1 file2  -> rename the file1 to file2
+
+rm  -> Remove /Delete files 
+rm -r file  -> r-"recursive" delete a directory and all of its child directories (!!! permanently delete)
+
+>>> Input and output redirection
+
+stdin  -> standard input
+stdout  -> standard output
+stderr  -> standard error
+
+echo "string"  -> accept "string" as stdin and echoes back to the terminal as stdout
+echo "string" > file  -> redirect the stdout to the file
+cat file  -> output the contents of the file
+cat file1 > file2  -> overwrite contents in file2 with contents in file1
+cat files1 >> file2  -> add contents of file1 to file2
+cat < file  -> output the contents of file
+cat file | wc -> output | as input to this side & wc outputs the number of lines , words and characters
+
+sort file -> sort alphabetically
+uniq file -> unique: filter out adjacent, duplicate lines in a file 
+sort file | uniq -> get sorted unique contents
+
+grep String file -> grep: "global regular expression print" search contents matching the pattern
+grep -i String file -> -i: case insensitive matching
+grep -R String directory/ -> -R: "recursive" search directory and output the filenames and lines matching the string
+grep -Rl String directory/ -> output only filenames matching the string
+
+sed 's/string1/string2' file -> sed: "string editor"  find "string1" and substitute it with "string2"
+sed 's/string1/string2/g' file -> g: "globally"
+
+>  -> stdout to overwrite a file
+>>  ->  stdout to add to a file
+<  -> stdin to a command
+|  -> stdout -> another command
+
+
+>>> Environment
+
+Each time launching the terminal app, it creates a new session (environment) -> configured to support the commands and programs 
+
+nano hello.txt  -> open the nano text editor / create a new text file named "hello.txt"(a command line text editor / only accepts keyboard input)
+Ctrl + X  -> exit nano
+Ctrl + O  -> O: output / save the file
+Ctrl + G  -> open a help menu
+
+~/.bash_profile  -> ~/.bash_profile is the name of file used to store environment settings
+~  -> user's home directory
+.  -> a hidden file
+nano ~/.bash_profile  -> open the bash profile file in nano
+source ~/.bash_profile  -> activate the changes in the bash profile for the current session
+
+alias variable = "string"  -> create alias variable for the "string"
+
+export PS1=">> "  -> PS1: Prompt Style / change $ to >> 
+export USER = "String"  -> set environment variable USER to the "String" (available to all child sessions)
+echo $USER  -> return the value of the variable
+echo $HOME  -> display the path of the home directory
+echo #PATH  -> store a list of directories containing scripts
+/bin/pwd  -> many commands are scripts stored in the /bin directory
+
+env  -> "environment": return a list of the environment variables for the current user
+
+
+
+
