@@ -10,6 +10,6 @@ I'd like to arm myself with both powers to make impact and make the world a bett
 
 My Journey So Far
 
->> Command Lines
->> Git & GitHub
->> SQL
+- Command Lines
+- Git & GitHub
+- SQL
