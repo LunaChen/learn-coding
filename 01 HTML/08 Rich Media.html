@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+ <html>
+ 	<head>
+ 		<title>Forms</title>
+ 	</head>
+
+ 	<body>
+ 		<h1>Rich Media</h1>
+ 		<h2>Canvas</h2>
+
+		<canvas id="myCanvas" width="200" height="200" style="background-color: #333333">
+		Your browser does not support the HTML5 canvas tag.</canvas>
+
+		 <!-- 
+		 	* You need to use JavaScript to draw on the canvas
+		 	* Inside <style> is JavaScript example that we will explore later in our JavaScript brown bag!
+	 	-->
+
+		<script>
+		/* Step 1 Find the Canvas element */
+		var firstCanvas = document.getElementById("myCanvas");
+		
+		/* Step 2 Create a drawing object */
+		var obj = firstCanvas.getContext("2d");
+	
+		/* Step 3 Draw on the canvas */
+		var n,m;
+		for (n=0;n<4;n++){
+			for (m=0; m<4;m++){
+				obj.beginPath();
+				obj.arc(53+n*30,53+m*30,10,0,2*Math.PI);
+				if ((n !=3 && m ==1) || (n == 2 && m != 0)){
+					obj.fillStyle = "#31b4d6";
+				}else{
+					obj.fillStyle = "#FFFFFF";
+				}
+				obj.fill();
+			}
+		}
+		</script> 
+
+ 		<h1>Audio</h1>
+ 		<audio src="audio/gujiguji.mp3" autoplay controls loop preload="auto"></audio>
+ 		<!-- 
+		 * audio: HTML5 tag
+		 	src: the source file of the audio
+		 	autoplay: Boolean attribute - show: autoplay
+		 	controls: show audio controls 
+		 	preload: buffer - "none" / "auto" / "metadata"
+	 	-->
+
+
+ 		<h1>Video</h1>
+ 		<video src="video/watchdemo.mp4" controls width="225" height="300" poster="images/luna.jpg"></video>
+ 		<!-- 
+		 * video: HTML5 tag
+		 	src: the source file of the video
+		 	autoplay: Boolean attribute - show: autoplay
+		 	controls: show video controls 
+		 	poster: static picture
+	 	-->
+	 	<br />
+	 	
+	 	<iframe width="560" height="315" src="https://www.youtube.com/embed/NxODhdOTneE" frameborder="0" allowfullscreen></iframe>
+
+ 	</body>
+ </html>

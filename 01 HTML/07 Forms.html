@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+ <html>
+ 	<head>
+ 		<title>Forms</title>
+ 	</head>
+
+ 	<body>
+ 		<h1>Forms</h1>
+
+ 		<!-- What is a form?
+ 			Refer to different elements that allow you to collect information from visitors
+
+ 			How forms work?
+ 			1 Input: A user fills in a form & press a button
+ 			2 Send: [Name:value] -> send to the server
+ 			3 Process: The server processes the info using a back-end language (may also store the info in  a database)
+ 			4 Response: The server creates a new page to send back to the browser  		
+	 	-->
+
+ 		<h2>Form Strcuture</h2>
+  		<!-- Form
+  			* form: all form controls live inside a <form> element
+  			* action: required attribute - the URL for the page on the server that will recieve the info in the form when it is submitted
+  			* method: form-data can be sent via two methods
+  				- get: as URL variables 
+  				(non-secure / can be bookmarked / size limitation)
+  				- post: as HTTP post transaction
+  				(append form-data inside HTTP request / cannot be bookmarked no size limiation )
+	 	-->
+	 	<form action="http://www.example/com/subscribe.php" method ="get">
+			<p>This is where the form controls will appear</p>			
+		</form>
+
+		 <h2>Adding text</h2>
+		 <!-- Attributes:
+		 	* input: 
+  			* Type: input type  - go to W3C to see the whole list
+  			* Name: the name of the input
+  			* Placeholder: 	
+  				- show ghost text
+  				- input focus: remove the text
+  				- leave input without value: reinstate ghost text
+  			* Autofocus: When the doc loads,automatically focus one form field
+  			* Required: required input field 
+  			* list: associate a list of options with input
+  				- datalist: id="listName"
+  				- option: value="options"
+	 	-->
+
+		 <form action="http://www.example.com/login.php" method ="get">
+		 	<p>Username: <input type="text" name="username" placeholder="lunachen" autofocus="" /></p>
+		 	<p>Password: <input type="password" name="password" placeholder="at least 6 characters" /></p>
+
+		 	<p>What's your name?</p>
+		 	<p>Name: <input type="text" name="name" list="names" placeholder="type to select" />
+		 		<datalist id="names">
+		 			<option value="Luna" />
+		 			<option value="Randall" />
+		 			<option value="Tiya" />
+		 			<option value="Sarah" />
+		 			<option value="Ana" />
+		 		</datalist>
+		 	</p>
+
+		 	<p>How do you think of BetterWorks?</p>
+		 	<textarea name="comment">I think...</textarea>
+		 </form>
+
+		<h2>Making choices</h2>
+		<form action="http://www.example.com/login.php" method ="get">
+			 <h3> Radio button</h3>
+
+			 <p>Please select your favorite product designer:
+			 <br />
+			 <input type="radio" name="designer" value="Luna Hom" checked="checked" /> Luna Hom
+			 <input type="radio" name="designer" value="Randall Tiyasirichokchai" /> Randall Tiyasirichokchai
+			 <input type="radio" name="designer" value="Tiya Wookey" /> Tiya Wookey
+			 <input type="radio" name="designer" value="Sarah Chen" /> Sarah Chen
+			 </p>
+
+			 <h3> Checkbox button</h3>
+			 <p> Please select your pods:
+			  	<br />
+			  	<input type="checkbox" name="pod" value="Core-Pod" /> Core Pod
+			  	<input type="checkbox" name="pod" value="Enterprise Pod" checked="checked" /> Enterprise Pod
+			  	<input type="checkbox" name="pod" value="Platform Pod" /> Platform Pod
+			  	<input type="checkbox" name="pod" value="Mobile Pod" checked="checked" /> Mobile Pod
+			</p>
+
+			<h3> Drop down list</h3>
+			<p>Which team are your in?
+			<select name="team">
+			 	<option value="Design">Design</option>
+			 	<option value="CS">CS</option>
+			 	<option value="Engineer">Engineer</option>
+			 	<option value="Sales">Sales</option>
+			 	<option value="PeopleOps">PeopleOps</option>
+			</select>
+			</p>
+
+			<h2>Other form controls</h2>
+			<p>Upload your profile picture:</p>
+			<input type="image" src="images/luna.jpg" /><br />
+			<input type="file" name="profile-picture" /><br />
+			<input type="submit" name="upload" value="Upload" /><br />
+			<input type="search" name="search" placeholder="Search your uploaded file" /><input type="submit" value="search" />
+			</p>
+		</form>
+
+		<h2>More organized structure</h2>
+			<!-- 
+		 	* label: 
+		 		- wrap around both the text description and the form input
+		 		- separate from the form control and use the for attribute to indicate which form control it is a label for 
+  			* fieldset: Group of related form controls
+  			* legend: the caption of the group
+	 		-->
+	 	<form action="http://www.example.com/login.php" method ="get">
+		 	<fieldset>
+		 		<legend>Personal Info</legend>
+		 		<label>Email: <input tyle="email" name="email" /></label><br />
+		 		<label>Phone: <input tyle="tel" name="telephone" /></label><br />
+		 		<label>Birthday: <input tyle="date" name="birthday" /></label><br />
+		 	</fieldset>
+		 </form>
+
+ 	</body>
+ </html>

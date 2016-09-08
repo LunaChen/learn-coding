@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+ <html>
+ 	<head>
+ 		<title>Tables</title>
+ 	</head>
+
+ 	<body>
+ 	
+ 	<h1>Tables</h1>
+ 	<!-- A table represents info in a grid format -->
+	
+	<h2>Basic Table Structure</h2>
+	<!--  
+ 		* table: to create a table (row by row)
+ 		* tr: table row
+ 		* td: table data
+	-->
+	<table border="1">
+		<!-- border attribute is used here to better show the table structure. You should NOT use it since we are expected to use CSS to control the style of the web -->
+		<!-- 1st row -->
+		
+		<tr>
+			<td>1</td> <td>2</td>
+		</tr>
+
+		<!-- 2nd row -->
+		<tr>
+			<td>3</td><td>4</td>
+		</tr>
+	</table>
+
+	<h2>Table Headings</h2>
+	<!--  
+ 		* th: table heading
+ 		* either a column or a row (use scope attribute)
+	-->
+	<table border="1">
+		<!-- 1st row -->
+		<tr>
+			<th scope="col">Name</th> <th scope="col">Gender</th>
+		</tr>
+		<!-- 2nd row -->
+		<tr>
+			<td>Ana</td> <td>Female</td>
+		</tr>
+		<!-- 3rd row -->
+		<tr>
+			<td>Randall</td> <td>Male</td>
+		</tr>
+	</table>
+
+	<h2>Spanning Cols and Rows</h2>
+
+	<!-- How to show table with cells running across cols and row?  
+ 		_______________________________
+ 		|_________|_________|_________|
+ 		|___________________|         |
+ 		|_________|_________|_________|
+
+ 		Use colspan / rowspan attributes in <td>
+ 	 -->
+
+ 	 <table border="1">
+
+ 	 	<!-- 1st row -->
+ 	 	<tr>
+ 	 		<th>10 AM</th><th>11 AM</th><th>12 AM</th>
+ 	 	</tr>
+ 	 	<!-- 2nd row -->
+ 	 	<tr>
+ 	 		<td colspan="2">team meeting</td><td rowspan="2">Pod Standup</td>
+ 	 	</tr>
+ 	 	<!-- 3rd row -->
+ 	 	<tr>
+ 	 		<td>work session</td><td>Interview</td>
+ 	 	</tr>
+ 	 </table>
+
+ 	 <h2>More Complex Tables</h2>
+ 	 <!--  
+ 		* thead: the headings of the table
+ 		* tbody: the body of the table
+ 		* tfoot: the footer of the table
+	-->
+
+	<table border="1">
+
+		<thead>
+			<th>Name</th><th># of eyes</th><th># of feet</th>
+		</thead>
+
+		<tbody>
+			<tr>
+			<th scope="row">Frog</th><td>2</td><td>4</td>
+			</tr>
+			<tr>
+			<th scope="row">Cat</th><td>2</td><td>4</td>
+			</tr>
+			<th scope="row">Duck</th><td>2</td><td>2</td>
+			</tr>
+		</tbody>
+
+		<tfoot>
+			<th scope="row">Total Types</th><td>1</td><td>2</td>
+		</tfoot>
+	</table>
+
+ 	</body>
+ </html>

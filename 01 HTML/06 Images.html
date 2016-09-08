@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+ <html>
+ 	<head>
+ 		<title>Images</title>
+ 	</head>
+
+ 	<body>
+ 		<h1>Images</h1>
+
+ 		<h2>Image basics</h2>
+		<!-- 3 attributes of <img>:
+ 		* src: source
+ 		* alt: alternative text description
+ 			- always for screenreader software & search engines
+ 			- if the picture has no meaning (e.g. graphic dividing line), still use it but the quotes should be left empty
+ 		* title: additional information about the image 
+ 			- most browsers will display the content of this attribute in a tooltip)
+	 	-->
+
+	 	<img src="images/luna.jpg" alt="luna's profile picture" title="Luna is a product designer at BetterWorks.">
+
+	 	<hr />
+
+	 	<h2>Block and inline elements</h2>
+
+	 	<!-- two kinds of elements
+ 		* block elemetns : always appear on a new line
+ 			- e.g. <h1> <p>
+ 		* inline elements : sit within a block level element
+ 			- e.g. <em> <img>
+	 	-->
+
+	 	<h3>Before block element</h3>
+	 	<img src="images/luna.jpg" alt="luna's profile picture" title="Luna is a product designer at BetterWorks.">
+	 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur gravida arcu sed consectetur. Proin posuere mollis tellus, a viverra ligula vehicula eget. Proin non diam non lectus tempor scelerisque. Nam id ante in arcu ultrices venenatis. Vestibulum porta ultricies leo, at malesuada felis ultricies vitae. Etiam et elit ac urna ultricies luctus. </p>
+
+	 	<h3>At the beginning of the block element</h3>
+	 	<p><img src="images/luna.jpg" alt="luna's profile picture" title="Luna is a product designer at BetterWorks.">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur gravida arcu sed consectetur. Proin posuere mollis tellus, a viverra ligula vehicula eget. Proin non diam non lectus tempor scelerisque. Nam id ante in arcu ultrices venenatis. Vestibulum porta ultricies leo, at malesuada felis ultricies vitae. Etiam et elit ac urna ultricies luctus. </p>
+
+ 		<h3>In the middle of the block element</h3>
+	 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur gravida arcu sed consectetur. Proin posuere mollis tellus, a viverra ligula vehicula eget. <img src="images/luna.jpg" alt="luna's profile picture" title="Luna is a product designer at BetterWorks.">Proin non diam non lectus tempor scelerisque. Nam id ante in arcu ultrices venenatis. Vestibulum porta ultricies leo, at malesuada felis ultricies vitae. Etiam et elit ac urna ultricies luctus. </p>
+
+	 	<hr />
+
+	 	<h2>Image Formats</h2>
+	 	<ul>
+	 		<li>JPG - Joint Photographic Experts Group</li>
+	 		<li>PNG - Portable Network Graphics</li>
+	 		<li>GIF - Graphics Interchange Format</li>
+	 		<li>SVG - Scalable Vector Graphics</li>
+	 	</ul>
+	 	<!-- How to choose image formats
+ 		* Colors
+ 			- JPG: many different colors in a picture
+ 			- GIF/PNG: few colors or large areas of the same color
+ 		* Bitmap V.S. Vector
+ 			- JPG/PNG/GIF: bitmap images (use the right size!)
+ 			- SVG: vector images (resolution-independent)
+ 		* Static V.S. Dynamic
+ 			- JPG/PNG/SVG: static images
+ 			- GIF: dynamic images
+ 			* We could use JavaScript to add animation to static images
+ 		* Transparency
+ 			- JPG: don't support
+ 			- GIF: support images that have straight edges and no semi-opaque
+ 			- PNG: support images that have diagonal or rounded edges / semi-opaque transparency / a drop-shadow
+	 	-->
+ 		
+ 		<h2>Figure element</h2>
+ 		<!-- 
+ 			- figure: contain images and their caption (two are associated) - HTML5 new tag
+ 			- figcaption: add a caption to an image
+ 			- browser sometimes <figure> content
+	 	-->
+
+	 	<figure>
+	 		<img src="images/luna.jpg" alt="luna's profile picture" title="Luna is a product designer at BetterWorks.">
+	 		<br />
+	 		<figcaption>Luan is a product designer at BetterWorks.</figcaption>
+	 	</figure>
+
+ 	</body>
+ </html>

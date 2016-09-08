@@ -1,0 +1,72 @@
+<!-- This is a comment | shortcut "cmd + /"  -->
+
+<!-- 
+	HTML is a Markup Language for describing web documents (web pages).
+	* HTML stands for Hyper Text Markup Language
+	* A markup language is a set of markup tags
+	* HTML documents are described by HTML tags 
+	* Each HTML tag describes different document content (elements)
+	* HTML uses elements to describe the STRUCTURE of pages
+	
+	* Tags 
+		- act like containers
+		- Most of them are in pairs: Opening tag & Closing tag 
+		- Closing tags contain a forward slash "/"
+
+	* Attributes 
+		- provide additional info about the contents of an element
+		- structure: name = "value" 
+ -->
+
+<!DOCTYPE html>
+<!-- The DOCTYPE declaration defines the document type to be HTML * HTML5 -->
+
+<html>
+<!-- The text between <html> and </html> describes an HTML document -->
+
+	<head>
+		<!-- head: provides information about the document
+			* title
+			* meta
+				- name + content: e.g. description / keywords / robots(search engine)
+				- http-equiv + content: provides an HTTP header for the information/value of the content attribute
+				e.g. author / pragma (caching) / expires
+			* style
+			* link
+		-->
+		<title>Titile shows in your browser's tag head</title>
+		<meta name="description"
+			content="An example page teaching BetterWorks designers Structural Tags in HTML" />
+		<meta name="keywords"
+			content="BetterWorks, HTML, design">
+		<meta http-equiv="author" 
+			content="Luna Chen" />
+	</head>
+
+	<body>
+		<!-- body: describes the visible page content-->
+		Hello World!
+
+		<h1>This is a h1 heading</h1>
+		<h2>This is a h2 heading</h2>
+		<h3>This is a h3 heading</h3>
+		<h4>This is a h4 heading</h4>
+		<h5>This is a h5 heading</h5>
+		<h6>This is a h6 heading</h6>
+		<p>This is a paragraph</p>
+		<p>If you write a really long paragraph<br />you can use this tag to break it.</p>
+		<hr />
+		<p>You can also use the tag above this paragraph to create a horizontal rule. There are a few elements like this one that do not have any words between an opening and closing tag. They are known as Empty Elements</p>
+		<p>Other tags include <sup>superscript</sup> and <sub>subscript</sub></p>
+
+		<h1>Most Verstile Structure Tags</h1>
+			<!-- div: division - divide your page into containers - block-level -->
+			<div style="width:50px; height:50px; background-color: red"></div>
+			<div style="width:50px; height:50px; background-color: blue"></div>
+			<div style="width:50px; height:50px; background-color: yellow"></div>
+			<!-- span: divide smaller part of the page - inline -->
+			<p> My company is called <span style="color:blue">BetterWorks</span>. </p>
+
+	</body>
+</html>
+

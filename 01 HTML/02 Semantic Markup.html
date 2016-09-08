@@ -1,0 +1,109 @@
+<!-- 
+	There are some text elements that are not intended to affect the structure of the web pages, but they do add extra info to the pages.
+	They are known as Semantic Markup!
+
+	Browsers often displaythe contents of these elements in a different way. But you should NOT use them to change the way the text looks; their purpose is to describe the content of the web page more accurately.
+ -->
+
+ <!DOCTYPE html>
+
+ <html>
+ 	<head>
+ 		<title>Semantic Markup</title>
+ 	</head>
+
+ 	<body>
+ 		<h1>Strong and Emphasis</h1>
+	 		<p>
+	 			<strong>BetterWorks</strong> is a great company!
+	 			<br /> [ Strong ] tag  indicates its strong importance
+	 		</p>
+
+	 		<p>
+	 			How do you think of our <em>design</em> team?
+	 			<br /> [ em ] tag indicates emphasis
+	 		</p>
+
+
+		<h1>Quotes and Citation</h1>
+	
+			<!-- blockquote: longer quotes that take up an entire paragraph-->
+
+	 		<blockquote cite="https://www.betterworks.com/">BetterWorks: Introducing the Business Operating System</blockquote>
+
+	 		<!-- q: shorter quotes that sit within a paragrahy * IE doesn't support this tag-->
+	 		<p>Luna Chen said, <q>Our design team is the best.</q></p>
+
+			<!-- cite: inditcate where the citation is from e.g. a book, film or research paper-->
+			<p><cite>Make it New: the History of Silicon Valley Design</cite> by Barry M. Katz is the book I'm reading.</p>
+
+ 		<h1>Abbreviation and Definition</h1>
+	 		<p><abbr title="National Aeronautics and Space Administration"> NASA</abbr> has a cool design system.</p>
+
+			<!-- dfn: the first time you explain some new terminology e.g. an academicconcept or some jargon-->
+	 		<p><dfn>Raptor</dfn> is our iOS app.</p>
+
+		<h1>Changes to Content</h1>
+
+			<!-- 
+				* del: show content that has been deleted from it
+				* ins: show content that has been inserted into the doc
+				* s: show content that is no longer accurate or relevant but that should not be deleted 
+			-->	
+
+	 		<p>We <del>will learn</del> <ins>are learning</ins> HTML.</p>
+
+	 		<P>Luna's coding course:</P>
+	 		<p> <s>was $999</s></p>
+	 		<p>Now FREE for BetterWorkers!</p>
+
+ 		<h1>Author Details</h1>
+			<!-- address: to contain contact detials for the autor of the page-->
+
+			<address>
+				<p><a href="mailto:luna@betterworks.com">luna@betterworks.com</a></p>
+				<p>999 Main st, Redwood City, CA.</p>
+			</address>
+
+		<h1>HTML5 New Semantic Elements</h1>
+			<!-- You need to add some fallback code when using them
+				 e.g. a blog website
+			-->
+
+			<hgroup>
+				<h1>Page title</h1>
+				<h2>Page subtitle</h2>
+			</hgroup>
+
+			<nav>Navigation module</nav>
+
+			<article>
+				<header>you can have a banner of this article</header>
+				<p>Here you can add the content of your article</p>
+			</article>
+
+			<aside>Here you can have previous articles</aside>
+			<section>You can also add a section</section>
+			
+			<footer>You can have a footer</footer>	
+
+		<!-- 
+			Summary: HTML elements are used to
+			* Describe the structure of the page
+			 	- head / body
+			 	- h1 / h2 / h3 / h4 / h5 / h6
+			 	- br / hr
+			 	- sup / sub
+			* Provide semantic infomration
+				- strong / em
+				- blockquote / q / cite 
+				- abbr / dfn
+				- del / ins / s
+				- address
+				- hgroup
+				- nav / header / footer
+				- article / section / aside
+		-->	
+
+ 	</body>
+ </html>
